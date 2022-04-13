@@ -1,0 +1,7 @@
+{
+    "id": "nodebb-theme-mycustom",
+    "name": "Custom",
+    "description": "Custom NodeBB theme.",
+    "url": "",
+    "screenshot": "logo.jpg"
+}

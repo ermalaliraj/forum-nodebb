@@ -1,53 +1,66 @@
-# Forum NodeBB (custom)
+# Forum NodeBB with Custom Theme
 
-[**NodeBB Forum Software**](https://nodebb.org) is powered by Node.js and supports either Redis, MongoDB, or a PostgreSQL database. 
-It utilizes web sockets for instant interactions and real-time notifications. NodeBB takes the best of the modern web: 
-real-time streaming discussions, mobile responsiveness, and rich RESTful read/write APIs, while staying true to the original 
-bulletin board/forum format &rarr; categorical hierarchies, local user accounts, and asynchronous messaging.
+[**NodeBB Forum**](//github.com/NodeBB/NodeBB) version using a Custom Theme.
 
-NodeBB by itself contains a "common core" of basic functionality, while additional functionality and integrations are enabled through the use of third-party plugins.
-
-##### [Try Live Open Source](//try.nodebb.org) | [Git Open Source](//github.com/NodeBB/NodeBB)
-
-
-### Get NodeBB v1.19.5
-```
-git clone -b v1.19.x https://github.com/NodeBB/NodeBB.git forum-nodebb
-cd forum-nodebb
-```
+##### [Try Live Open Source](//try.nodebb.org) | [Git Open Source](//github.com/NodeBB/NodeBB) | [Web page](https://nodebb.org) 
 
 
 ## Run in Windows
 
+This version is built starting from  `v1.19.5` with addition of some `external plugins` + a `custom theme`. 
+
+
+### Requirements
+NodeBB requires the following software to be installed:
+
+- `Node.js` version 12 or greater
+- `Docker` engine (or MongoDB in your local) 
+- `nginx` version 1.3.13 or greater
+
 ### MongoDB in Docker 
-Change the `docker-compose.yml` leaving only code related to MongoDB and run the container.
+`docker-compose.yml` has been changed for running only MongoDB inside a docker container.
 ```
 docker-compose up -d
 ```
-
-To test the connection you can use MongoDB Compass `mongodb://root:root@localhost:27017/?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false`
-
 ### NodeBB in local
-`config.json` has the connection to mongo DB. 
-
+The connection to mongo DB is configured in `config.json`
 ```
 nodebb install
 ```
+Should launch the web installer. Insert `username`, `email`, `pwd` and click `Install NodeBB`.  
 
-Should lunch the web installer. Insert username, email, pwd for the NodeBB forum and click Install NodeBB.  
-
-
-### Other plugins
+### Activate Custom theme
+Login with the same user/pwd and go to `Admin->Appearance->Themes`
 ```
+http://localhost:4567/admin/appearance/themes
+```
+
+Choose the `custom` theme
+<img src="./public/images/test/currentTheme.JPG" width="80%" height="auto">
+
+Click the button in the right upper side of the screen `Rebuild and restart Forum`.<br/>
+The forum, should look like this: 
+
+<img src="./public/images/test/customTheme.JPG" width="80%" height="auto">
+
+
+### Build History
+No need to execute the following steps, they are listed only for history purposes. 
+References are already present in `package.json`.
+```
+git clone -b v1.19.x https://github.com/NodeBB/NodeBB.git forum-nodebb
+cd forum-nodebb
+
 npm install nodebb-plugin-emailer-sendgrid
 npm install nodebb-plugin-embed
 npm install nodebb-plugin-s3-uploads-digitalocean
 npm install nodebb-plugin-share-post-icons
 npm install nodebb-theme-timuu
+npm install file:custom/nodebb-theme-mycustom
 ```
 
-## Links
 
+## Links
 
 * [Demo](https://try.nodebb.org)
 * [Documentation](//docs.nodebb.org) 

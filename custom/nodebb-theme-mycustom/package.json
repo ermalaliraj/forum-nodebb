@@ -1,0 +1,13 @@
+{
+  "name": "nodebb-theme-mycustom",
+  "version": "0.1.0",
+  "nbbpm": {
+    "compatibility": "^1.18.0"
+  },
+  "description": "Custom NodeBB theme",
+  "main": "theme.less",
+  "keywords": [],
+  "contributors": [],
+  "repository": {},
+  "bugs": {}
+}

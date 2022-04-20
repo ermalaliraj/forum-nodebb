@@ -43,6 +43,11 @@ The forum, should look like this:
 
 <img src="./public/images/test/customTheme.JPG" width="80%" height="auto">
 
+### Activate Plugins
+Login with the same user/pwd and go to `Admin->Plugins->Install Plugins` and activate all the plugins you wish.
+
+<img src="./public/images/test/activatePlugins.JPG" width="70%" height="auto">
+
 
 ### Build History
 No need to execute the following steps, they are listed only for history purposes. 

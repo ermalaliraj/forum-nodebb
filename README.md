@@ -43,6 +43,22 @@ The forum, should look like this:
 
 <img src="./public/images/test/customTheme.JPG" width="80%" height="auto">
 
+### Activate Plugins
+Login with the same user/pwd and go to `Admin->Plugins->Install Plugins`, activate the plugins you wish and rebuild from the admin UI.
+
+<img src="./public/images/test/activatePlugins.JPG" width="60%" height="auto">
+
+### Configure FusionAuth
+You should set the follwoing ENV variables before trying FusionAuth
+```
+export AUTH_BASE_URL="URL of FusionAuth"
+export AUTH_CLIENT_ID="FusionAuth application client id"
+export AUTH_CLIENT_SECRET="FusionAuth application client secret"
+export AUTH_CALLBACK_URL="callback URL for NodeBB"
+```
+
+The configuration of your FusionAuth can be consulted in `http://localhost:4567/admin/plugins/fusionauth-oidc` (after activation)
+More info about the plugin [here](https://github.com/FusionAuth/nodebb-plugin-fusionauth-oidc)
 
 ### Build History
 No need to execute the following steps, they are listed only for history purposes. 
@@ -57,6 +73,7 @@ npm install nodebb-plugin-s3-uploads-digitalocean
 npm install nodebb-plugin-share-post-icons
 npm install nodebb-theme-timuu
 npm install file:custom/nodebb-theme-mycustom
+npm install file:custom/nodebb-plugin-vial-fusionauth
 ```
 
 
@@ -66,4 +83,4 @@ npm install file:custom/nodebb-theme-mycustom
 * [Documentation](//docs.nodebb.org) 
 * [How to install NodeBB on Windows](https://docs.nodebb.org/installing/os/windows/)
 * [Git NodeBB Open Source](//github.com/NodeBB/NodeBB)
-
+* [FusionAuth plugin](https://github.com/FusionAuth/nodebb-plugin-fusionauth-oidc)

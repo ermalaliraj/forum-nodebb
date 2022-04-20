@@ -57,6 +57,7 @@ npm install nodebb-plugin-s3-uploads-digitalocean
 npm install nodebb-plugin-share-post-icons
 npm install nodebb-theme-timuu
 npm install file:custom/nodebb-theme-mycustom
+npm install file:custom/nodebb-plugin-vial-fusionauth
 ```
 
 

@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
 
 :root {
     --bs-blue: #375a7f;
@@ -210,7 +212,134 @@ button#mobile-chats.navbar-toggle:hover,
 .nav>li>a:hover {
     background-color: #77777750;
 }
+// Edit Profile Design Css
 
-.teaser-content .teaser-username {
-    color: aaa;
+.page-user-edit {
+    font-family: 'Poppins',sans-serif;
+}
+
+.breadcrumb>li+li:before {
+    content: "/";
+    padding: 0 0px;
+    color: #ccc;
+}
+
+a {
+    color: #7934fb;
+}
+
+a:hover, a:focus {
+    color: #7934fb;
+    opacity: .8;
+}
+
+.page-user-edit .account>.row {
+    display: grid;
+    grid-template-columns: 0% 30% 70%;
+}
+
+ul.list-group>a {
+    background: #2f323b;
+    border: 1px solid #1f1d1e;
+    color: #ffffff8f;
+    padding: 15px 20px;
+}
+
+ul.list-group>a:nth-child(1) {
+    border-radius: 10px 10px 0px 0px;
+}
+
+ul.list-group>a:nth-child(4) {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.account-picture-block>a#deleteAccountBtn:hover {
+    background: #ff5722;
+    color: #fff;
+}
+
+.account-picture-block>a#deleteAccountBtn {
+    padding: 15px 50px;
+    background: #0000;
+    border-color: #ff5722;
+    color: #ff5722;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.page-user-edit .account .breadcrumb {
+    display: none;
+}
+
+.col-md-9 label {
+    font-weight: 500;
+}
+
+.col-md-9 .form-group {
+    margin-bottom: 25px;
+}
+
+.col-md-9 .form-control {
+    background: #2f323b;
+    border: 0;
+    border-radius: 8px;
+    color: #ffffff8f;
+    font-style: italic;
+    resize: vertical;
+    border: 1px solid #2f323b;
+
+}
+
+.col-md-9 .form-control:focus {
+    box-shadow: 0 0 0 0 #000;
+    border: 1px solid #6d7283;
+    color: #fff;
+}
+
+.col-md-9 a#submitBtn {
+    padding: 13px 30px;
+    background: #673ab7;
+}
+
+// .page-user-edit main#panel {
+//     position: relative;
+// }
+
+// .page-user-edit main#panel:before {
+//     content: '';
+//     background-image: url(/assets/images/edit-pro.png);
+//     background-repeat: repeat;
+//     background-position: 0% 100%;
+//     background-size: 50%;
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     opacity: .7;
+//     z-index: -1;
+// }
+
+.page-user-edit .account .cover{
+    top: -20px;
+    display: none;
+}
+
+
+
+@media (min-width: 992px){
+    .page-user-edit .col-md-2 {
+        width: 75%;
+    }
+
+    .page-user-edit .col-md-9 {
+        width: 100%;
+    }
+
+    .account {
+        margin-top: 50px;
+        padding-bottom: 200px;
+        z-index: 100;
+    }
+
 }
